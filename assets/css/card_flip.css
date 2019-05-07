@@ -1,0 +1,90 @@
+         .thumbnail,
+         .team-member{
+             border: none;
+         }
+    /*=============================
+      card flip animation
+      =============================*/
+      .card{
+        perspective: 150rem;
+        position: relative;
+        height: 40rem;
+      }
+
+      .card__side {
+        height: inherit;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .card__side--front>img{
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+                z-index: 1px;
+      }
+      .card__side--front h4{
+          font-weight: 400;
+      }
+      .card__side--front h6{
+          font-size: 12px;
+      }
+      .card__side--front {
+        background-color: #2998FF;
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, .2);
+      }
+      .card__side--back {
+        transform: rotateY(180deg);
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, .2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        width: 100%;
+        margin: auto;
+        padding: 0px 30px;
+      }
+      .card__side .card__side--font--white{
+        color:white;
+      }
+      .card__side .cutted{
+        background-color: #2998FF;
+        z-index: 444px;
+        width:100%;
+        height: 20px;
+      }
+
+      .card__side--back .card__Description{
+        margin: auto;
+        width: 90%;
+      }
+      .card__side--back-1 {
+        background-color: white;
+      }
+      .card__side--back-2 {
+        background-image: white;
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, .5);
+      }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #55c57a, #28b485);
+      }
+
+      @media (max-width:640px){
+        .card{
+          width: 80%;
+          margin-top:37px;
+          margin-bottom: 30px;
+        }
+      }
+
+
+      .card:hover .card__side--front {
+        transform: rotateY(-180deg);
+      }
+      .card:hover .card__side--back {
+        transform: rotateY(0);
+      }

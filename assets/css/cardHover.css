@@ -1,0 +1,15 @@
+
+    .cards .card:hover .card__image {
+        color: #F03B58;
+      }
+      .cards .card:hover .card__Title {
+        color: #2C314E;
+      }
+      .cards .card:hover .card__Subtitle {
+        color: #013ADF;
+      }
+      .cards .card:hover .card__Description {
+        max-height: 1000px;
+        margin: 10px auto 30px auto;
+        transition: max-height 3s ease;
+      }

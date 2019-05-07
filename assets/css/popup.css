@@ -1,0 +1,282 @@
+
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .5s .2s;
+  }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 1px solid #999999;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+.popup__close:link, .popup__close:visited {
+  color: #777;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+  line-height: 1;
+}
+.popup__close:hover {
+  color: #7ed56f;
+}
+
+
+
+
+
+.heading-secondary {
+  font-family: 'lato' , sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(to right, #289ae6, #0945ec);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .3rem;
+  transition: all .2s ease; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  .heading-secondary:hover {
+    transform: skewY(3deg) skewX(10deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+
+.heading-third {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/*=====================
+  btn
+=======================*/
+.btn:link, .btn:visited {
+  border: none;
+  cursor: pointer;
+ }
+.btn:link:link, .btn:link:visited, .btn:visited:link, .btn:visited:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* padding : 15px 40px;*/
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  /*border-radius: 100px;*/
+  border-radius: 10rem;
+  transition: all .2s;
+  /*animation bouton*/
+  position: relative;
+  /* on le met en position relative pour cacher l'element fils ::after*/
+  /*font-size:1.6rem;*/
+}
+.btn:link:hover, .btn:visited:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* l'ombrage lors du hover*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:link:active, .btn:visited:active {
+transform: translateY(-1px);
+/*box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* l'ombrage lors du clic*/
+box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover:link, .btn:hover:visited {
+text-transform: uppercase;
+text-decoration: none;
+/* padding : 15px 40px;*/
+padding: 1.5rem 4rem;
+display: inline-block;
+/*border-radius: 100px;*/
+border-radius: 10rem;
+transition: all .2s;
+/*animation bouton*/
+position: relative;
+/* on le met en position relative pour cacher l'element fils ::after*/
+/*font-size:1.6rem;*/
+}
+
+.btn:hover:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* l'ombrage lors du hover*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover:active {
+  transform: translateY(-1px);
+  /*box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* l'ombrage lors du clic*/
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  /*l'element en derriere s'agrandissent une fois plus que l'element parant*/
+  opacity: 0; }
+
+.btn:active:link, .btn:active:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* padding : 15px 40px;*/
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  /*border-radius: 100px;*/
+  border-radius: 10rem;
+  transition: all .2s;
+  /*animation bouton*/
+  position: relative;
+  /* on le met en position relative pour cacher l'element fils ::after*/
+  /*font-size:1.6rem;*/ }
+
+.btn:active:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* l'ombrage lors du hover*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active:active {
+  transform: translateY(-1px);
+  /*box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* l'ombrage lors du clic*/
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--green {
+  background-color: #038dfe;
+  color: #fff;
+  font-weight: bold;
+  width: 25%;
+  border: none;
+  cursor: pointer; }
+.btn--green::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  /* pour cacher l'element debordant fils*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* un element derriere un autre */
+  transition: all .4s;
+  background-color: #038dfe;
+}
+
+
+
+.btn--animated {
+  animation-name: moveInLeft;
+  /* appel fonction @keyframes */
+  animation-duration: 2s;
+  /* durée de l'animation */
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  /* le bouton ne s'affichera pas jusqu'a atteindre son temps d'animation */
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 1.5rem;
+}
+
+
+@keyframes moveInLeft {
+  0% {
+    sopacity: 0;
+      /* transform: translateX(-100px); /* gauche à droite*/
+    transform: translateX(-10rem);
+    }
+  60% {
+    transform: rotate(-20deg);
+    }
+  80% {
+    /*transform: translateX(10px);*/
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /* retour à l'etat initial */
+    }
+  }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    /*transform: translateX(100px); /* droite  à droite*/
+    transform: translateX(10rem); }
+  60% {
+    transform: rotate(-20deg); }
+  80% {
+    /*transform: translateY(-10px);*/
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /* retour à l'etat initial */
+    }
+  }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    /*transform: translateY(-100px); /* droite  à droite*/
+    transform: translateY(-10rem); }
+  80% {
+    /* transform: translate(10px);*/
+    transform: translate(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /* retour à l'etat initial */ }
+   }
